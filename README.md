@@ -87,3 +87,10 @@ Ouvre le site sur deux appareils (ou deux onglets), ajoute une admission sur l'u
 - **Numéros et caissons** : les numéros d'admission (ADM-0001, ADM-0002…) sont attribués par la base. Deux personnes qui enregistrent en même temps n'auront jamais le même numéro, ni le même caisson.
 - **Coût** : l'offre gratuite de Firebase (Spark) suffit largement pour ce site.
 - **Supprimer les exemples** : le bouton « Charger 3 exemples » du tableau de bord crée des dossiers de démonstration. Supprime-les un par un depuis le registre.
+
+## Si ça ne marche pas
+
+- **Le badge reste sur « Ouverture… » et les listes sont vides** : le fichier `assets/app.js` ne se charge pas. Vérifie sur GitHub que le dossier `assets` contient bien `app.js` et `firebase-config.js`, avec ces noms exacts (minuscules). Appuie sur `F12`, onglet **Console** : l'erreur s'y affiche.
+- **Le badge affiche « Données sur cet appareil »** : la configuration n'est pas lue ou Firebase est injoignable. Vérifie que `assets/firebase-config.js` commence bien par `window.FIREBASE_CONFIG = {`.
+- **Message « Écriture refusée »** : les règles de l'étape 4 ne sont pas publiées.
+- **Après une mise à jour des fichiers sur GitHub**, attends une minute puis recharge la page avec `Ctrl + F5`.
