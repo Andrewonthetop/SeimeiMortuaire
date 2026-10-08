@@ -17,7 +17,7 @@
       <div class="eyebrow">Registre officiel</div>
       <h1>Morgue de Sunagakure</h1>
     </div>
-    <span class="badge">Données sur cet appareil</span>
+    <span class="badge" id="mode">Ouverture…</span>
   </header>
 
   <nav class="nav" aria-label="Sections">
@@ -48,9 +48,10 @@
       </form></section>
   </main>
 
-  <p class="foot">Les dossiers sont gardés dans ce navigateur uniquement. Ils ne sont pas partagés avec d'autres personnes ni d'autres appareils.</p>
+  <p class="foot" id="foot"></p>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script src="assets/firebase-config.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>
