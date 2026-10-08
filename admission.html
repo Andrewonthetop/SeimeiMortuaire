@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Admission · Morgue de Sunagakure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style/style.css">
+</head>
+<body data-page="admission">
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow">Registre officiel</div>
+      <h1>Morgue de Sunagakure</h1>
+    </div>
+    <span class="badge">Données sur cet appareil</span>
+  </header>
+
+  <nav class="nav" aria-label="Sections">
+    <a href="index.html">Tableau de bord</a>
+    <a href="admission.html" aria-current="page">Admission</a>
+    <a href="registre.html">Registre</a>
+    <a href="autopsies.html">Autopsies</a>
+    <a href="rapports.html">Rapports</a>
+    <a href="caissons.html">Caissons</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2 class="sec-title">Nouvelle admission</h2>
+      <form class="form" id="f-adm" autocomplete="off">
+        <div class="field"><label for="adm-nom">Nom</label><input id="adm-nom" name="nom" type="text" placeholder="Nom ou 'Inconnu'"></div>
+        <div class="field"><label for="adm-prenom">Prénom</label><input id="adm-prenom" name="prenom" type="text"></div>
+        <div class="field"><label for="adm-grade">Grade</label><select id="adm-grade" name="grade"></select></div>
+        <div class="field"><label for="adm-village">Village</label><select id="adm-village" name="village"></select></div>
+        <div class="field"><label for="adm-date">Date du décès</label><input id="adm-date" name="dateDeces" type="date"></div>
+        <div class="field"><label for="adm-cause">Cause présumée</label><select id="adm-cause" name="cause"></select></div>
+        <div class="field full"><label for="adm-circ">Circonstances</label><textarea id="adm-circ" name="circonstances" placeholder="Contexte du décès..."></textarea></div>
+        <div class="field full"><label for="adm-lieu">Lieu du décès</label><input id="adm-lieu" name="lieu" type="text" placeholder="Ex : désert ouest"></div>
+        <div class="field full"><label for="adm-par">Ramené par</label><input id="adm-par" name="ramenePar" type="text"></div>
+        <div class="field full"><label for="adm-caisson">Caisson n°</label><select id="adm-caisson" name="caisson"></select></div>
+        <div class="field full"><label for="adm-notes">Notes</label><textarea id="adm-notes" name="notes" placeholder="Observations..."></textarea></div>
+        <div class="form-actions"><button class="btn" type="submit">Enregistrer l'admission</button></div>
+      </form></section>
+  </main>
+
+  <p class="foot">Les dossiers sont gardés dans ce navigateur uniquement. Ils ne sont pas partagés avec d'autres personnes ni d'autres appareils.</p>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

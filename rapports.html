@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Rapports · Morgue de Sunagakure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style/style.css">
+</head>
+<body data-page="rapports">
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow">Registre officiel</div>
+      <h1>Morgue de Sunagakure</h1>
+    </div>
+    <span class="badge">Données sur cet appareil</span>
+  </header>
+
+  <nav class="nav" aria-label="Sections">
+    <a href="index.html">Tableau de bord</a>
+    <a href="admission.html">Admission</a>
+    <a href="registre.html">Registre</a>
+    <a href="autopsies.html">Autopsies</a>
+    <a href="rapports.html" aria-current="page">Rapports</a>
+    <a href="caissons.html">Caissons</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2 class="sec-title">Nouveau rapport</h2>
+      <form class="form" id="f-rap" autocomplete="off">
+        <div class="field"><label for="rap-type">Type</label><select id="rap-type" name="type"></select></div>
+        <div class="field"><label for="rap-date">Date</label><input id="rap-date" name="date" type="date" required></div>
+        <div class="field full"><label for="rap-titre">Titre</label><input id="rap-titre" name="titre" type="text" required></div>
+        <div class="field"><label for="rap-auteur">Auteur</label><input id="rap-auteur" name="auteur" type="text"></div>
+        <div class="field"><label for="rap-adm">Défunt concerné</label><select id="rap-adm" name="admissionId"></select></div>
+        <div class="field full"><label for="rap-contenu">Contenu</label><textarea id="rap-contenu" name="contenu" required placeholder="Faits, constats, suites à donner…" style="min-height:8rem"></textarea></div>
+        <div class="form-actions"><button class="btn" type="submit">Enregistrer le rapport</button></div>
+      </form>
+      <div class="records" id="rap-out"></div></section>
+  </main>
+
+  <p class="foot">Les dossiers sont gardés dans ce navigateur uniquement. Ils ne sont pas partagés avec d'autres personnes ni d'autres appareils.</p>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

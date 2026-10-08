@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Autopsies · Morgue de Sunagakure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style/style.css">
+</head>
+<body data-page="autopsies">
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow">Registre officiel</div>
+      <h1>Morgue de Sunagakure</h1>
+    </div>
+    <span class="badge">Données sur cet appareil</span>
+  </header>
+
+  <nav class="nav" aria-label="Sections">
+    <a href="index.html">Tableau de bord</a>
+    <a href="admission.html">Admission</a>
+    <a href="registre.html">Registre</a>
+    <a href="autopsies.html" aria-current="page">Autopsies</a>
+    <a href="rapports.html">Rapports</a>
+    <a href="caissons.html">Caissons</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2 class="sec-title">Nouvelle autopsie</h2>
+      <form class="form" id="f-aut" autocomplete="off">
+        <div class="field"><label for="aut-adm">Défunt</label><select id="aut-adm" name="admissionId" required></select></div>
+        <div class="field"><label for="aut-date">Date de l'autopsie</label><input id="aut-date" name="dateAutopsie" type="date" required></div>
+        <div class="field"><label for="aut-leg">Médecin légiste</label><input id="aut-leg" name="legiste" type="text"></div>
+        <div class="field"><label for="aut-nature">Nature de la mort</label><select id="aut-nature" name="nature"></select></div>
+        <div class="field full"><label for="aut-cause">Cause confirmée</label><select id="aut-cause" name="cause"></select></div>
+        <div class="field full"><label for="aut-ext">Examen externe</label><textarea id="aut-ext" name="externe" placeholder="Blessures visibles, état de la peau, objets retrouvés…"></textarea></div>
+        <div class="field full"><label for="aut-int">Examen interne</label><textarea id="aut-int" name="interne" placeholder="Organes, lésions internes…"></textarea></div>
+        <div class="field full"><label for="aut-ana">Chakra et analyses</label><textarea id="aut-ana" name="analyses" placeholder="Réseau de chakra, toxicologie, prélèvements…"></textarea></div>
+        <div class="field full"><label for="aut-con">Conclusion</label><textarea id="aut-con" name="conclusion" placeholder="Conclusion du légiste…"></textarea></div>
+        <div class="form-actions"><button class="btn" type="submit">Enregistrer l'autopsie</button></div>
+      </form>
+      <div class="records" id="aut-out"></div></section>
+  </main>
+
+  <p class="foot">Les dossiers sont gardés dans ce navigateur uniquement. Ils ne sont pas partagés avec d'autres personnes ni d'autres appareils.</p>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
